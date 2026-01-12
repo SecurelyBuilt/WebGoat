@@ -17,3 +17,4 @@ jobs:
           echo "Repository structure verified"
           ls -la
           echo "WebGoat successfully set up!"
+          
