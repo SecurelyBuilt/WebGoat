@@ -1,12 +1,10 @@
 name: Security Scanning Workflow
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-
 jobs:
   setup:
     name: Repository Setup Check
@@ -14,7 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
       - name: Verify repository structure
         run: |
           echo "Repository structure verified"
