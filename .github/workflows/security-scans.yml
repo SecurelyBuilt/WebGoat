@@ -31,7 +31,7 @@ jobs:
       # The results are output in JSON format to a file named 'semgrep-results.json'.
       - name: Run Semgrep Scan
         run: |
-              docker run --rm -v "$(pwd):/src" semgrep/semgrep semgrep scan /src --output-format=text
+              docker run --rm -v "$(pwd):/src" semgrep/semgrep semgrep scan /src --json -o semgrep-results.json
               
       # Provide a better view of the output              
       - name: Pretty-print Semgrep JSON
