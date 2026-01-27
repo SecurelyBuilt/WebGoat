@@ -31,7 +31,7 @@ jobs:
       # The results are output in JSON format to a file named 'semgrep-results.json'.
       - name: Run Semgrep Scan
         run: |
-          docker run --rm -v "$(pwd):/src" semgrep/semgrep semgrep scan /src --json -o semgrep-results.json
+              docker run --rm -v "$(pwd):/src" semgrep/semgrep semgrep scan /src --output-format=text
 
       # Step 3: Upload the JSON report as a build artifact.
       # This makes the results available for download from the workflow run's summary page.
