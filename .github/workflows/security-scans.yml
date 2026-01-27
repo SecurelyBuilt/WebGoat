@@ -32,6 +32,8 @@ jobs:
       - name: Run Semgrep Scan
         run: |
               docker run --rm -v "$(pwd):/src" semgrep/semgrep semgrep scan /src --output-format=text
+              
+      # Provide a better view of the output              
       - name: Pretty-print Semgrep JSON
         run: jq . semgrep-results.json
 
